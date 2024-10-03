@@ -5,8 +5,10 @@ void main() {
 }
 
 class CalculadoraIMCApp extends StatelessWidget {
+
   @override
-  Widget build(BuildContext context) {
+
+ Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Calculadora de IMC',
       theme: ThemeData(primarySwatch: Colors.blue),
@@ -22,13 +24,17 @@ class IMCCalculator extends StatefulWidget {
 
 class _IMCCalculatorState extends State<IMCCalculator> {
   final TextEditingController _nameController = TextEditingController();
+	
   final TextEditingController _weightController = TextEditingController();
+	
   final TextEditingController _heightController = TextEditingController();
   String _result = '';
 
   void _calculateIMC() {
     final String name = _nameController.text;
+		
     final double weight = double.tryParse(_weightController.text) ?? 0;
+		
     final double height = double.tryParse(_heightController.text) ?? 0;
 
     if (weight > 0 && height > 0) {
